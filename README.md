@@ -12,4 +12,4 @@ To run in device:
 
 #### `npm run android`
 
-To refresh lis just pull
+To refresh list just pull
