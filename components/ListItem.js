@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight, Image } from 'react-native';
 import { Badge, Card } from 'react-native-elements';
 
-//export { getCreationDate } from '../util/dateFormat';
-
 var lib = require("../util/dateFormat.js");
 
 /**
@@ -54,7 +52,7 @@ export default class ListItem extends Component {
                             <View style={{ flex: 1, flexDirection: 'row' }}>
                                 <View style={{ flex: 1 }}>
                                 </View>
-                                <View style={{ flex: 1 }}>
+                                <View style={{ flex: 2 }}>
                                     <Text >{this.formatDate(this.props.item.data.created)}</Text>
                                 </View>
                             </View>
