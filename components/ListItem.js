@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight, Image } from 'react-native';
 import { Badge, Card } from 'react-native-elements';
+
+//export { getCreationDate } from '../util/dateFormat';
+
+var lib = require("../util/dateFormat.js");
+
 /**
  * Renders each item in the list
  * 
@@ -17,6 +22,18 @@ export default class ListItem extends Component {
     constructor(props) {
         super(props);
     }
+
+    /**
+     * Convert creation date
+     * 
+     * @param {any} dateInput 
+     * @returns 
+     * @memberof ListItem
+     */
+    formatDate(dateInput) {
+        return lib.getCreationDate(dateInput);
+    }
+
 
     /**
      * Render  component
@@ -38,7 +55,7 @@ export default class ListItem extends Component {
                                 <View style={{ flex: 1 }}>
                                 </View>
                                 <View style={{ flex: 1 }}>
-                                    <Text >{this.props.creation}</Text>
+                                    <Text >{this.formatDate(this.props.item.data.created)}</Text>
                                 </View>
                             </View>
                             <View style={{ flex: 3, padding: 5 }}>

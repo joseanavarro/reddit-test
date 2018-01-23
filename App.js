@@ -94,20 +94,6 @@ export default class App extends React.Component {
   }
 
   /**
-   * Convert created timestamp
-   * 
-   * @param {any} item 
-   * @returns 
-   * @memberof App
-   */
-  getCreationDate(item) {
-    var newDate = new Date();
-    newDate.setTime(item.data.created * 1000);
-    return dateString = newDate.toLocaleString();
-  }
-
-
-  /**
    * Render List
    * 
    * @returns 
@@ -122,7 +108,6 @@ export default class App extends React.Component {
           renderItem={({ item }) => (
             <ListItem
               item={item}
-              creation={this.getCreationDate(item)}
               onPress={() => this.handlePress(item)}
             />)
           }
