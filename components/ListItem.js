@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight, Image } from 'react-native';
 import { Badge, Card } from 'react-native-elements';
 
-var lib = require("../util/dateFormat.js");
+import { getCreationDate } from '../util/dateFormat';
 
 /**
  * Renders each item in the list
@@ -29,7 +29,7 @@ export default class ListItem extends Component {
      * @memberof ListItem
      */
     formatDate(dateInput) {
-        return lib.getCreationDate(dateInput);
+        return getCreationDate(dateInput);
     }
 
 

@@ -2,7 +2,7 @@
  * Utility to convert date format
  * 
  */
-exports.getCreationDate = function (inputDate) {
+export var getCreationDate = function (inputDate) {
 
     var date = new Date();
     date.setTime(inputDate * 1000);
