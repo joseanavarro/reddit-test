@@ -52,8 +52,8 @@ export default class ListItem extends Component {
                             <View style={{ flex: 1, flexDirection: 'row' }}>
                                 <View style={{ flex: 1 }}>
                                 </View>
-                                <View style={{ flex: 2 }}>
-                                    <Text >{this.formatDate(this.props.item.data.created)}</Text>
+                                <View style={{ flex: 1 }}>
+                                    <Text >{this.formatDate(this.props.item.data.created_utc)}</Text>
                                 </View>
                             </View>
                             <View style={{ flex: 3, padding: 5 }}>
